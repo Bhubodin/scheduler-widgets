@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Focus Timer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #191919;          /* Notion dark background */
@@ -20,10 +20,11 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; background: var(--bg); }
   body {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
     color: var(--text);
     display: flex;
     -webkit-font-smoothing: antialiased;
+    font-variant-numeric: lining-nums tabular-nums;
   }
   .timer {
     width: 100%;
@@ -74,9 +75,9 @@
   .adj:disabled { opacity: .3; cursor: default; }
   .clock {
     font-size: clamp(40px, 15vw, 64px);
-    font-weight: 800;
-    letter-spacing: 1px;
-    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-variant-numeric: lining-nums tabular-nums;
     line-height: 1;
   }
   .label { font-size: 12px; color: var(--muted); margin-top: -6px; }

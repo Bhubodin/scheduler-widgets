@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calendar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #191919;          /* Notion dark background */
     --surface: #211d1a;     /* warm card tone */
     --text: #e9dfd3;
-    --muted: #6f655c;
+    --muted: #9a8c7e;
     --accent: #c99a6b;      /* tan */
     --accent-text: #1c1612;
     --hover: #2e2722;
@@ -19,10 +19,11 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; background: var(--bg); }
   body {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
     color: var(--text);
     display: flex;
     -webkit-font-smoothing: antialiased;
+    font-variant-numeric: lining-nums tabular-nums;
   }
   .cal {
     width: 100%;
@@ -40,6 +41,7 @@
     justify-content: space-between;
   }
   .title {
+    font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(15px, 4.6vw, 20px);
     font-weight: 700;
     letter-spacing: 0.3px;
@@ -65,19 +67,21 @@
     text-align: center;
   }
   .dow {
-    font-size: clamp(10px, 2.8vw, 12px);
+    font-size: clamp(11px, 3vw, 13px);
     font-weight: 700;
     color: var(--muted);
     display: flex; align-items: center; justify-content: center;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
   .day {
-    font-size: clamp(11px, 3.4vw, 14px);
+    font-weight: 500;
+    font-size: clamp(13px, 3.8vw, 16px);
     display: flex; align-items: center; justify-content: center;
     border-radius: 6px;
     min-height: 26px;
   }
-  .day.other { color: var(--muted); opacity: 0.55; }
+  .day.other { color: var(--muted); opacity: 0.4; }
   .day:not(.other):hover { background: var(--hover); }
   .day.today {
     background: var(--accent);
